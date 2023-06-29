@@ -1,5 +1,5 @@
 .login-container {
-    background-image: url(../Icons/login-bg-1.svg);
+    background-image: url("");
     background-repeat: no-repeat;
     margin-top: -70px;
     background-size: cover;
@@ -10,17 +10,16 @@
 .login-container h4 {
     color: white;
     white-space: nowrap;
+    font-size: 19px;
+    margin: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
 }
 
 .logo-container {
     text-align: center;
 }
 
-.logo-container img {
-    height: 100px;
-    width: 100px;
-    margin-bottom: -15px;
-}
 
 .form-container {
     width: 22rem;
@@ -34,7 +33,7 @@ form * {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: white;
@@ -86,14 +85,15 @@ form>span {
     opacity: 0.5;
 }
 
-.login-container button {
-    width: 50%;
-    padding: 0.5rem;
+.btn {
+
+    padding: 10px 90px;
     margin-top: 7px;
     background-color: rgb(4, 115, 215);
     color: #fff;
     border: none;
     border-radius: 4px;
+
     cursor: pointer;
     border-radius: 20px;
 }
@@ -124,33 +124,6 @@ form>span {
     color: red;
     font-size: 0.8rem;
     text-align: start;
-}
-
-.project_added {
-
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5px;
-}
-
-.innerprojadd {
-    width: 57%;
-    height: 51px;
-    margin: auto;
-    background-color: green;
-    border-radius: 21px 3px;
-}
-
-.innerprojadd>p {
-    margin: auto;
-    padding: 13px;
-    font-size: 17px;
-    font-family: system-ui;
-    font-weight: 500;
-    margin-left: 9px;
-    letter-spacing: 0.5px;
 }
 
 

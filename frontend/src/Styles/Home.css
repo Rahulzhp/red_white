@@ -1,0 +1,265 @@
+body {
+    background: url('') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin: 27px 0px;
+    font-size: 23px;
+    font-weight: 700;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type='text'] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.product {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 11px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Functionbtn {
+    display: flex;
+    margin: auto;
+
+    justify-content: space-between;
+}
+
+#utentbtn {
+    background-color: green;
+    padding: 5px;
+}
+
+#dtentbtn {
+    background-color: red;
+    padding: 5px;
+}
+
+
+.product h3 {
+    margin: 0;
+    color: #333;
+}
+
+.product p {
+    margin: 5px 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    margin-bottom: 5px;
+}
+
+.product .price {
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.sort-bar {
+    display: flex;
+    align-items: center;
+    margin-top: -13px;
+}
+
+.sort-bar label {
+    margin-right: 10px;
+}
+
+.sort-bar select {
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    height: 49px;
+
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    width: 20%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.action-button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button.start {
+    background-color: rgb(4, 78, 146);
+    color: #fff;
+    border-radius: 13px;
+}
+
+.action-button.close,
+.action-button.cancel {
+    background-color: white;
+    color: rgb(4, 78, 146);
+    border: solid 1px rgb(4, 78, 146);
+    border-radius: 13px;
+}
+
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.pagination button.active {
+    background-color: rgb(72, 212, 247);
+    color: #fff;
+    border-radius: 50%;
+}
+
+.notauth {
+    width: 31%;
+    height: 109px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin-top: 145px;
+}
+
+.notauth>p {
+    font-size: 19px;
+    font-weight: 600;
+    font-family: sans-serif;
+    letter-spacing: 0.7px;
+    color: teal;
+}
+
+#authbtn {
+    color: white;
+    background-color: rgb(4, 78, 146);
+    padding: 7px;
+    border-radius: 11px;
+    font-size: 18px;
+    font-weight: 700;
+}

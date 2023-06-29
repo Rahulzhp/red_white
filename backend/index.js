@@ -4,8 +4,9 @@ const cors = require("cors");
 const { connection } = require("./config/db");
 const { usersRoute } = require("./routes/userroute")
 const { projectRoute } = require("./routes/projectroute")
+const { authenticate } = require("./middleware/auth")
 
-const cookieSession = require('cookie-session');
+
 
 require('dotenv').config()
 const app = express()
@@ -17,10 +18,7 @@ app.use(
     })
 );
 
-app.use(cookieSession({
-    maxAge: 24 * 60 * 60 * 1000, // 1 day in milliseconds
-    keys: ['rahulvicku_yash_arti'], // Replace with your own secret key
-}));
+
 
 // Initialize Passport
 
@@ -29,6 +27,7 @@ app.get("/", (req, res) => {
 })
 
 app.use("/users", usersRoute)
+app.use(authenticate)
 app.use("/project", projectRoute)
 app.listen(process.env.port, async () => {
     try {

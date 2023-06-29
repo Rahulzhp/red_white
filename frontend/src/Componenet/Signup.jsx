@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-import './Signup.css'; // import CSS file for styling
-import logo from '../Icons/Logo.svg';
+import '../Styles/Signup.css'; // import CSS file for styling
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios"
+import { Box, Image, useToast } from '@chakra-ui/react';
 const Signup = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const toast = useToast()
     const navigate = useNavigate()
     const [name, setname] = useState("")
     const [email, setEmail] = useState("")
@@ -39,10 +41,17 @@ const Signup = () => {
         } else {
             setPasswordError(false);
             setdisable(true)
-            axios.post("https://light-bat-gown.cyclic.app/users/register", payload)
+            axios.post("http://localhost:8080/users/register", payload)
                 .then((res) => {
-                    if (res.data === "success") {
+                    if (res.data === "Registered") {
                         setsignsucess(true)
+                        toast({
+                            title: 'Account created.',
+                            description: "We've created your account for you.",
+                            status: 'success',
+                            duration: 9000,
+                            isClosable: true,
+                        })
                         setTimeout(() => {
                             navigate("/login")
                             setdisable(false)
@@ -52,6 +61,13 @@ const Signup = () => {
                     } else {
                         setsignsucess(false)
                         setdisable(false)
+                        toast({
+                            title: 'Invalid Account.',
+                            description: "Your account is not created.",
+                            status: 'error',
+                            duration: 9000,
+                            isClosable: true,
+                        })
                     }
                 })
                 .catch(err => setdisable(false))
@@ -69,8 +85,7 @@ const Signup = () => {
         <div className="login-container">
             <div className="container">
                 <div className="logo-container">
-                    <img src={logo} alt="Logo" />
-                    <h4>Online Project Management</h4>
+                    <h4>Best Content App</h4>
                 </div>
                 <div className="form-container">
                     <form onSubmit={onHendell}>
@@ -123,15 +138,9 @@ const Signup = () => {
                         {passwordError && <span className="error-text">Password is required</span>}
 
 
-                        <button type="submit" disabled={disable} style={{ backgroundColor: disable ? "gray" : "rgb(4, 115, 215)" }}>Signup</button>
+                        <button className='btn' type="submit" disabled={disable} style={{ backgroundColor: disable ? "gray" : "rgb(4, 115, 215)" }}>Signup</button>
                     </form>
-                    <div className='project_added'>
 
-                        {
-                            signsucess ? <div className='innerprojadd'><p style={{ color: "white" }}>Sign up successful</p></div> : ""
-                        }
-
-                    </div>
                 </div>
             </div>
         </div>

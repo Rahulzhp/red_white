@@ -1,6 +1,7 @@
 const express = require("express");
 const projectRoute = express.Router();
 const { ProjectModel } = require("../model/project");
+const { authenticator } = require("../middleware/auth")
 
 const PAGE_SIZE = 5; // Number of items per page
 
@@ -102,7 +103,7 @@ projectRoute.post("/", async (req, res) => {
     try {
         const data = new ProjectModel(payload);
         await data.save();
-        res.send(data);
+        res.send("posted");
     } catch (err) {
         res.send(err);
     }
@@ -111,7 +112,7 @@ projectRoute.patch("/:id", async (req, res) => {
     const id = req.params.id;
     const payload = req.body;
     try {
-        const data = await ProjectModel.findByIdAndUpdate({ _id: id }, payload);
+        const data = await ProjectModel.findByIdAndUpdate(id, payload);
         res.send({ msg: "updated" });
     } catch (err) {
         res.send(err);
@@ -122,8 +123,8 @@ projectRoute.delete("/:id", async (req, res) => {
     const id = req.params.id;
 
     try {
-        const data = await ProjectModel.findByIdAndDelete({ _id: id });
-        res.send({ msg: "deleted" });
+        const data = await ProjectModel.findByIdAndDelete(id);
+        res.send("deleted");
     } catch (err) {
         res.send(err);
     }

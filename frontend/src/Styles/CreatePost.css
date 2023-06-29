@@ -1,0 +1,92 @@
+.container {
+    background-image: url();
+    background-repeat: no-repeat;
+    margin-top: -70px;
+    background-size: cover;
+    background-position-y: -300px;
+    padding: 5rem;
+}
+
+.create-post-container h4 {
+    color: black;
+    white-space: nowrap;
+    font-size: 21px;
+    margin: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+
+.form-container {
+    width: 22rem;
+}
+
+form * {
+    color: #868383;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    border-radius: 10px;
+    background-color: white;
+}
+
+form>label {
+    text-align: start;
+    width: 100%;
+    padding: 5px;
+    margin-left: 1px;
+    color: black;
+}
+
+.create-post-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    background-color: #fff;
+    margin-top: 70px;
+
+
+
+}
+
+.create-post-container>div {
+    margin: auto;
+
+}
+
+.create-post-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.create-post-container input,
+.create-post-container textarea {
+    width: 98%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.create-post-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(4, 115, 215);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
